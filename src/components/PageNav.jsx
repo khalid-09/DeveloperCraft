@@ -3,7 +3,7 @@ import hamburger from '../assets/icons/hamburger.svg';
 
 const PageNav = () => {
   return (
-    <nav className="bg-lightBg md:w-[650px] sm:w-[550px] w-[400px] rounded-full  flex justify-between items-center z-10  mx-auto mt-8 nav py-2 px-2 font-libre text-sm fixed top-2">
+    <nav className="bg-lightBg md:w-[650px] sm:w-[550px] w-[400px] rounded-full  flex justify-between items-center z-10  mx-auto mt-8 nav py-2 px-2 font-libre text-sm fixed top-2 shadow">
       <ul className="gap-3 text-[#d6d3d1] rounded-full  hidden md:flex">
         <li className="nav-list">
           <NavLink to="/">Home</NavLink>
