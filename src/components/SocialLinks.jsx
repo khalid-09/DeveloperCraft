@@ -12,10 +12,10 @@ const SocialLinks = () => {
         <p className="uppercase  text-[#57534e] text-sm font-semibold">Links</p>
       </div>
       <div className="flex md:flex-col">
-        <div className="rounded-full flex md:justify-evenly mt-2">
+        <div className="flex md:justify-evenly mt-2">
           <div className="">
             <a href="" target="_">
-              <img src={github} alt="github-icon" className="h-20 w-20" />
+              <img src={github} alt="github-icon" className="h-20 w-20 " />
             </a>
           </div>
           <div className="">

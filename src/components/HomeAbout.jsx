@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
+import Button from './Button';
 
 const HomeAbout = () => {
   return (
@@ -17,9 +17,7 @@ const HomeAbout = () => {
             An Indian software engineer passionate about crafting app-based
             solutions.
           </p>
-          <button className="bg-mainBg mb-8 rounded-full px-6 py-3 text-white font-semibold uppercase text-sm hover:scale-105 transition font-poppins">
-            <Link to="/about"> Learn More &rarr;</Link>
-          </button>
+          <Button text="learn more" linkTo="/about" />
         </div>
         <SocialLinks />
       </div>

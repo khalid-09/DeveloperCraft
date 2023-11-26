@@ -1,12 +1,13 @@
 import projectIcon from '../assets/icons/projects.svg';
 import WorkCard from './WorkCard';
 import projectData from '../constants/HomeWorkProject';
+import Button from './Button';
 
 const HomeWork = () => {
   return (
     <>
       <p className="ml-5 mt-16 font-poppins text-sm font-semibold ">Work</p>
-      <div className=" w-full bg-lightBg rounded-2xl mb-4 px-4 py-4 mt-4 ">
+      <div className="w-full bg-lightBg rounded-2xl mb-4 px-4 py-4 mt-4 ">
         <div className="flex gap-3 items-center justify-start ml-2">
           <img src={projectIcon} alt="project-icon" className="" />
           <p className="uppercase  text-[#57534e] text-sm font-semibold">
@@ -23,6 +24,9 @@ const HomeWork = () => {
             key={project.title}
           />
         ))}
+        <div className="flex justify-end mt-3">
+          <Button text="view all" linkTo="/work" />
+        </div>
       </div>
     </>
   );
