@@ -1,7 +1,7 @@
 import sun from '../assets/icons/sun.svg';
 import moon from '../assets/icons/moon.svg';
 
-const ToggleButton = ({ isDark, onHandleClick }) => {
+function ToggleButton({ isDark, onHandleClick }) {
   return (
     <button
       onClick={onHandleClick}
@@ -18,6 +18,6 @@ const ToggleButton = ({ isDark, onHandleClick }) => {
       )}
     </button>
   );
-};
+}
 
 export default ToggleButton;
