@@ -6,10 +6,10 @@ import Button from './Button';
 const HomeWork = () => {
   return (
     <>
-      <p className="ml-5 mt-16 font-poppins text-medium dark:text-white text-mainBg font-bold ">
+      <p className="ml-5 mt-16 font-poppins text-medium dark:text-white text-mainBg font-bold transition duration-300 ease-in">
         Work
       </p>
-      <div className="w-full bg-mainBg dark:bg-lightBg rounded-2xl mb-4 px-4 py-4 mt-4 ">
+      <div className="w-full bg-mainBg dark:bg-lightBg rounded-2xl mb-4 px-4 py-4 mt-4 transition duration-300 ease-in">
         <div className="flex gap-3 items-center justify-start ml-2">
           <img src={projectIcon} alt="project-icon" className="" />
           <p className="uppercase  text-[#57534e] text-sm font-semibold">

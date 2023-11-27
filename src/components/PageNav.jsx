@@ -1,38 +1,22 @@
 import { NavLink } from 'react-router-dom';
 import hamburger from '../assets/icons/hamburger.svg';
-import sun from '../assets/icons/sun.svg';
-import moon from '../assets/icons/moon.svg';
-import { useEffect, useState } from 'react';
+
+import { useState } from 'react';
+import DropDownMenu from './DropDownMenu';
+import ToggleButton from './ToggleButton';
+import { useDark } from '../hooks/useDark';
 
 const PageNav = () => {
-  const [isDark, setIsDark] = useState(function () {
-    const storedValue = localStorage.getItem('isDark');
-    return JSON.parse(storedValue) && true;
-  });
+  const [open, setIsOpen] = useState(false);
+  const { isDark, handleClick } = useDark();
 
-  const handleClick = function handleClick() {
-    setIsDark(isDark => !isDark);
+  const handleShow = function handleShow() {
+    setIsOpen(open => !open);
   };
-
-  useEffect(
-    function () {
-      localStorage.setItem('isDark', JSON.stringify(isDark));
-    },
-    [isDark]
-  );
-
-  useEffect(() => {
-    const body = document.documentElement;
-    if (isDark) {
-      body.classList.add('dark');
-    } else {
-      body.classList.remove('dark');
-    }
-  }, [isDark]);
 
   return (
     <header className="fixed top-1">
-      <nav className="dark:bg-lightBg bg-mainBg md:w-[650px] sm:w-[550px] w-[400px]  rounded-full flex justify-between items-center z-10  mx-auto mt-8 nav py-1 px-1 font-libre text-sm ">
+      <nav className="dark:bg-lightBg bg-mainBg md:w-[650px] sm:w-[550px] w-[400px]  rounded-full flex justify-between items-center z-10  mx-auto mt-8 nav py-1 px-1 font-libre text-sm transition ease-in duration-300">
         <ul className="gap-3 text-[#d6d3d1] rounded-full  hidden md:flex">
           <li className="nav-list">
             <NavLink to="/">Home</NavLink>
@@ -50,26 +34,21 @@ const PageNav = () => {
             <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
-        <div className="block md:hidden ml-4">
-          <img src={hamburger} alt="hamburger" width={25} height={25} />
+        <div
+          className="block md:hidden rounded-3xl px-5 py-2 hover:bg-[#78716c] z-50"
+          onClick={handleShow}
+        >
+          <img
+            src={hamburger}
+            alt="hamburger"
+            width={20}
+            height={20}
+            className="z-50"
+          />
         </div>
-        <div>
-          <button
-            onClick={handleClick}
-            className="flex rounded-full bg-[#57534e] justify-between transition-all duration-300 hover:scale-105 border outline-none border-transparent hover:border-neutal-700/50 "
-          >
-            {!isDark ? (
-              <div className="justify-center items-center flex  rounded-full bg-black p-1 m-1 transition-all duration-300 shadow-sm hover:scale-105 h-7 w-7">
-                <img src={sun} />
-              </div>
-            ) : (
-              <div className="justify-center items-center flex  rounded-full bg-black p-1 m-1 transition-all duration-300 shadow-sm hover:scale-105 h-7 w-7">
-                <img src={moon} />
-              </div>
-            )}
-          </button>
-        </div>
+        <ToggleButton isDark={isDark} onHandleClick={handleClick} />
       </nav>
+      {open && <DropDownMenu />}
     </header>
   );
 };

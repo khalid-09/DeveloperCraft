@@ -28,7 +28,7 @@ li {
 @layer {
   html,
   body {
-    @apply dark:bg-mainBg;
+    @apply dark:bg-mainBg transition duration-300 ease-in;
   }
 }
 
