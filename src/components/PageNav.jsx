@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 const PageNav = () => {
   const [isDark, setIsDark] = useState(function () {
     const storedValue = localStorage.getItem('isDark');
-    return JSON.parse(storedValue) || false;
+    return JSON.parse(storedValue) && true;
   });
 
   const handleClick = function handleClick() {
