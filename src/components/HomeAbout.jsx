@@ -13,7 +13,7 @@ const HomeAbout = () => {
             DeveloperCraft
           </p>
           <h3 className="font-poppins text-xl text-white opacity-75">
-            Hi, I&apos;m Khalid
+            Hi, I&apos;m Khalid👋
           </h3>
           <p className="font-poppins text-[#a8a29e]">
             An Indian software engineer passionate about crafting app-based
