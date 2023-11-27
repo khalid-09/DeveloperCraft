@@ -9,7 +9,7 @@ import PageNotFound from './pages/PageNotFound';
 
 export default function App() {
   return (
-    <div>
+    <div className="">
       <BrowserRouter>
         <Routes>
           <Route index element={<Homepage />} />

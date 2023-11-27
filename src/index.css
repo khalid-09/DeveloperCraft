@@ -25,13 +25,11 @@ li {
   padding: 0;
 }
 
-html,
-body {
-  background-color: #0c0a09;
-}
-
-body {
-  /* padding-top: 80px; */
+@layer {
+  html,
+  body {
+    @apply dark:bg-mainBg;
+  }
 }
 
 nav a.active {

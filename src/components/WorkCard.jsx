@@ -29,7 +29,7 @@ const WorkCard = ({ title, desc, skills, imgURL, titlelink }) => {
       <ul className="p-2 flex gap-2 border-b-2 border-[#57534e] font-poppins ">
         {skills.map(skill => (
           <li
-            className="bg-mainBg px-3 md:px-4 rounded-full py-2 text-sm hover:scale-105"
+            className="bg-lightBg dark:bg-mainBg text-white px-2  md:px-2 rounded-full py-1 text-sm hover:scale-105"
             key={skill.skillName}
           >
             <a href={skill.skillURL} target="_">

@@ -6,7 +6,7 @@ import linkdein from '../assets/icons/logo-linkdein.svg';
 
 const SocialLinks = () => {
   return (
-    <div className="md:w-2/6 w-full bg-lightBg rounded-2xl pb-6 px-4 py-4 ">
+    <div className="md:w-2/6 w-full bg-mainBg dark:bg-lightBg rounded-2xl pb-6 px-4 py-4 ">
       <div className="flex gap-2 items-center justify-start ml-2">
         <img src={link} alt="links-icon" width={25} height={25} />
         <p className="uppercase  text-[#57534e] text-sm font-semibold">Links</p>
@@ -14,7 +14,7 @@ const SocialLinks = () => {
       <div className="flex md:flex-col">
         <div className="flex md:justify-evenly mt-2">
           <div className="">
-            <a href="" target="_">
+            <a href="https://github.com/khalid-09" target="_">
               <img src={github} alt="github-icon" className="h-20 w-20 " />
             </a>
           </div>
