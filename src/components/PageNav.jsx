@@ -37,7 +37,7 @@ const PageNav = () => {
           </li>
         </ul>
         <div
-          className="block md:hidden rounded-3xl px-5 py-2 hover:bg-[#78716c] z-50"
+          className="block md:hidden rounded-3xl px-5 py-2 hover:bg-[#78716c] z-50 transition ease-in duration-300"
           onClick={handleShow}
         >
           {!open ? (

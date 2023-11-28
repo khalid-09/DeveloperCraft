@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 export function useDark() {
   const [isDark, setIsDark] = useState(function () {
     const storedValue = localStorage.getItem('isDark');
-    return JSON.parse(storedValue) && true;
+    if (storedValue) return JSON.parse(storedValue);
+    return true;
   });
 
   const handleClick = function handleClick() {
