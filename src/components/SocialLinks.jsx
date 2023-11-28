@@ -1,18 +1,18 @@
-import link from '../assets/icons/link.svg';
-import instagram from '../assets/icons/logo-instagram.svg';
-import twitter from '../assets/icons/logo-twitter.svg';
-import github from '../assets/icons/logo-github.svg';
-import linkdein from '../assets/icons/logo-linkdein.svg';
+import link from "../assets/icons/link.svg";
+import instagram from "../assets/icons/logo-instagram.svg";
+import twitter from "../assets/icons/logo-twitter.svg";
+import github from "../assets/icons/logo-github.svg";
+import linkdein from "../assets/icons/logo-linkdein.svg";
 
 const SocialLinks = () => {
   return (
-    <div className="md:w-2/6 w-full bg-mainBg dark:bg-lightBg rounded-2xl pb-6 px-4 py-4 transition duration-300 ease-in">
-      <div className="flex gap-2 items-center justify-start ml-2">
+    <div className="w-full rounded-2xl bg-mainBg px-4 py-4 pb-6 transition duration-300 ease-in dark:bg-lightBg md:w-2/6">
+      <div className="ml-2 flex items-center justify-start gap-2">
         <img src={link} alt="links-icon" width={25} height={25} />
-        <p className="uppercase  text-[#57534e] text-sm font-semibold">Links</p>
+        <p className="text-sm  font-semibold uppercase text-[#57534e]">Links</p>
       </div>
       <div className="flex md:flex-col">
-        <div className="flex md:justify-evenly mt-2">
+        <div className="mt-2 flex md:justify-evenly">
           <div className="">
             <a href="https://github.com/khalid-09" target="_">
               <img src={github} alt="github-icon" className="h-20 w-20 " />
@@ -24,7 +24,7 @@ const SocialLinks = () => {
             </a>
           </div>
         </div>
-        <div className=" rounded-full flex md:justify-evenly mt-2">
+        <div className=" mt-2 flex rounded-full md:justify-evenly">
           <div className="">
             <a href="" target="_">
               <img src={instagram} alt="instagram-icon" className="h-20 w-20" />

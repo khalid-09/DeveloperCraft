@@ -1,25 +1,29 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import Homepage from './pages/Homepage';
-import About from './pages/About';
-import Work from './pages/Work';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
-import PageNotFound from './pages/PageNotFound';
+import Homepage from "./pages/Homepage";
+import About from "./pages/About";
+import Work from "./pages/Work";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+import PageNotFound from "./pages/PageNotFound";
+import AppLayout from "./pages/AppLayout";
 
-export default function App() {
-  return (
-    <div className="">
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-}
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    errorElement: <PageNotFound />,
+    children: [
+      { path: "/", element: <Homepage /> },
+      { path: "/about", element: <About /> },
+      { path: "/work", element: <Work /> },
+      { path: "/blog", element: <Blog /> },
+      { path: "/contact", element: <Contact /> },
+    ],
+  },
+]);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default App;

@@ -1,10 +1,14 @@
-import PageNav from '../components/PageNav';
+import HomeWork from "../components/HomeWork";
 
 const Work = () => {
   return (
-    <div className="text-white  mx-auto  md:w-[650px] w-[450px] ">
-      <PageNav />
-    </div>
+    <>
+      <div className="mt-36 md:mt-44">
+        <section>
+          <HomeWork />
+        </section>
+      </div>
+    </>
   );
 };
 

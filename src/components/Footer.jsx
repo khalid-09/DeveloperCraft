@@ -1,9 +1,9 @@
-import githubIcon from '../assets/icons/icon-github.svg';
+import githubIcon from "../assets/icons/icon-github.svg";
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="w-full flex justify-between items-center bg-mainBg dark:bg-lightBg text-[#57534e] rounded-full mt-20 mb-8 font-poppins px-6 py-3 transition duration-300 ease-in">
+    <footer className="mb-8 mt-20 flex w-full items-center justify-between rounded-full bg-mainBg px-6 py-3 font-poppins text-[#57534e] transition duration-300 ease-in dark:bg-lightBg">
       <a
         href="https://github.com/khalid-09/DeveloperCraft"
         className="flex items-center"

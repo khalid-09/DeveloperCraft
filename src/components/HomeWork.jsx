@@ -1,22 +1,22 @@
-import projectIcon from '../assets/icons/projects.svg';
-import WorkCard from './WorkCard';
-import projectData from '../constants/HomeWorkProject';
-import Button from './Button';
+import projectIcon from "../assets/icons/projects.svg";
+import WorkCard from "./WorkCard";
+import projectData from "../constants/HomeWorkProject";
+import Button from "./Button";
 
 const HomeWork = () => {
   return (
     <>
-      <p className="ml-5 mt-16 font-poppins text-medium dark:text-white text-mainBg font-bold transition duration-300 ease-in">
+      <p className="text-medium ml-5 mt-16 font-poppins font-bold text-mainBg transition duration-300 ease-in dark:text-white">
         Work
       </p>
-      <div className="w-full bg-mainBg dark:bg-lightBg rounded-2xl mb-4 px-4 py-4 mt-4 transition duration-300 ease-in">
-        <div className="flex gap-3 items-center justify-start ml-2">
+      <div className="mb-4 mt-4 w-full rounded-2xl bg-mainBg px-4 py-4 transition duration-300 ease-in dark:bg-lightBg">
+        <div className="ml-2 flex items-center justify-start gap-3">
           <img src={projectIcon} alt="project-icon" className="" />
-          <p className="uppercase  text-[#57534e] text-sm font-semibold">
+          <p className="text-sm  font-semibold uppercase text-[#57534e]">
             Projects
           </p>
         </div>
-        {projectData.map(project => (
+        {projectData.map((project) => (
           <WorkCard
             title={project.title}
             desc={project.desc}
@@ -26,7 +26,7 @@ const HomeWork = () => {
             key={project.title}
           />
         ))}
-        <div className="flex justify-end mt-3">
+        <div className="mt-3 flex justify-end">
           <Button text="view all" linkTo="/work" />
         </div>
       </div>

@@ -1,18 +1,18 @@
-import sun from '../assets/icons/sun.svg';
-import moon from '../assets/icons/moon.svg';
+import sun from "../assets/icons/sun.svg";
+import moon from "../assets/icons/moon.svg";
 
 function ToggleButton({ isDark, onHandleClick }) {
   return (
     <button
       onClick={onHandleClick}
-      className="flex rounded-full bg-[#57534e] justify-between transition-all duration-300 hover:scale-105 border outline-none border-transparent hover:border-neutal-700/50 "
+      className="hover:border-neutal-700/50 flex justify-between rounded-full border border-transparent bg-[#57534e] outline-none transition-all duration-300 hover:scale-105 "
     >
       {!isDark ? (
-        <div className="justify-center items-center flex  rounded-full bg-black p-1 m-1 transition-all duration-300 shadow-sm hover:scale-105 h-7 w-7">
+        <div className="m-1 flex h-7  w-7 items-center justify-center rounded-full bg-black p-1 shadow-sm transition-all duration-300 hover:scale-105">
           <img src={sun} />
         </div>
       ) : (
-        <div className="justify-center items-center flex  rounded-full bg-black p-1 m-1 transition-all duration-300 shadow-sm hover:scale-105 h-7 w-7">
+        <div className="m-1 flex h-7  w-7 items-center justify-center rounded-full bg-black p-1 shadow-sm transition-all duration-300 hover:scale-105">
           <img src={moon} />
         </div>
       )}
