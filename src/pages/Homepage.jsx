@@ -8,7 +8,7 @@ const Homepage = () => {
     <div className="text-white mx-auto md:w-[650px] w-[400px] sm:w-[550px]">
       <div className="">
         <PageNav />
-        <div className="mt-44">
+        <div className="md:mt-44 mt-36">
           <HomeAbout />
           <HomeWork />
           <Footer />

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import hamburger from '../assets/icons/hamburger.svg';
+import cross from '../assets/icons/cross.svg';
 
 import { useState } from 'react';
 import DropDownMenu from './DropDownMenu';
@@ -39,13 +40,23 @@ const PageNav = () => {
           className="block md:hidden rounded-3xl px-5 py-2 hover:bg-[#78716c] z-50"
           onClick={handleShow}
         >
-          <img
-            src={hamburger}
-            alt="hamburger"
-            width={20}
-            height={20}
-            className="z-50"
-          />
+          {!open ? (
+            <img
+              src={hamburger}
+              alt="hamburger"
+              width={20}
+              height={20}
+              className="z-50"
+            />
+          ) : (
+            <img
+              src={cross}
+              alt="cross"
+              width={18}
+              height={17}
+              className="z-50"
+            />
+          )}
         </div>
         <ToggleButton isDark={isDark} onHandleClick={handleClick} />
       </nav>
