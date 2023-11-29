@@ -1,10 +1,10 @@
-import HomeAbout from "../components/HomeAbout";
-import HomeWork from "../components/HomeWork";
+import HomeAbout from '../components/HomeAbout';
+import HomeWork from '../components/HomeWork';
 
 const Homepage = () => {
   return (
     <>
-      <div className="mt-36 md:mt-44">
+      <div className="mt-36  md:mt-44">
         <section>
           <HomeAbout />
         </section>

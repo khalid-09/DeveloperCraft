@@ -2,8 +2,8 @@ const projectData = [
   {
     title: 'WorldWise',
     desc: 'Track your global travels at a glance with our app, counting countries visited in a single tap.',
-    imgURL: '',
-    titleLink: '',
+    imgURL: '/',
+    titleLink: '/',
     skills: [
       {
         skillName: 'React',
@@ -26,8 +26,8 @@ const projectData = [
   {
     title: 'usePopcorn',
     desc: 'Discover, track all-in-one app for accessing movie details and keeping tabs on your watched list.',
-    imgURL: '',
-    titleLink: '',
+    imgURL: '/',
+    titleLink: '/',
     skills: [
       {
         skillName: 'React',
