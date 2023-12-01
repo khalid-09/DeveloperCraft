@@ -3,8 +3,9 @@ import instagram from '../assets/icons/logo-instagram.svg';
 import twitter from '../assets/icons/logo-twitter.svg';
 import github from '../assets/icons/logo-github.svg';
 import linkdein from '../assets/icons/logo-linkdein.svg';
+import { memo } from 'react';
 
-const SocialLinks = () => {
+const SocialLinks = memo(function SocialLinks() {
   return (
     <div className="w-full rounded-2xl bg-mainBg p-4  transition duration-300 ease-in dark:bg-lightBg md:w-2/6">
       <div className="ml-2 flex items-center justify-start gap-2">
@@ -39,6 +40,6 @@ const SocialLinks = () => {
       </div>
     </div>
   );
-};
+});
 
 export default SocialLinks;

@@ -1,7 +1,8 @@
 import SocialLinks from './SocialLinks';
 import Button from './Button';
+import { memo } from 'react';
 
-const HomeAbout = () => {
+const HomeAbout = memo(function HomeAbout() {
   return (
     <div>
       <p className="text-medium ml-5 font-poppins font-bold text-mainBg transition duration-300 ease-in dark:text-white">
@@ -22,6 +23,6 @@ const HomeAbout = () => {
       </div>
     </div>
   );
-};
+});
 
 export default HomeAbout;

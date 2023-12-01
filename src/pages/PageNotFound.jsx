@@ -1,5 +1,5 @@
 const PageNotFound = () => {
-  return <div>PageNotFound</div>;
+  return <div className="text-black">PageNotFound</div>;
 };
 
 export default PageNotFound;
