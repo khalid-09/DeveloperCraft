@@ -4,18 +4,18 @@ import webLink from '../assets/icons/website-link.svg';
 const WorkCard = ({ title, desc, skills, imgURL, titlelink }) => {
   return (
     <div>
-      <div className="mt-4 flex gap-4 p-2">
-        <div className="h-24 w-32 rounded-3xl border">
+      <div className="mt-4 flex  gap-2 p-2 sm:gap-4 md:gap-6">
+        <div className="h-20 w-24 rounded-3xl border">
           <img src={imgURL} alt="project-link" />
         </div>
         <div className="flex w-full flex-col gap-2">
-          <h4 className="font-railway text-xl transition hover:underline ">
+          <h4 className="font-poppins text-xl transition hover:underline ">
             <a href={titlelink} className="flex gap-1">
               {title}
               <img src={webLink} height={15} width={15} alt="web-link-icon" />
             </a>
           </h4>
-          <p className="font-poppins text-sm md:text-base">
+          <p className="font-poppins text-sm text-stone-400 md:text-base">
             {desc}{' '}
             <Link to="/work" className="font-poppins italic text-white opacity-50 hover:underline">
               Learn More &rarr;
@@ -23,10 +23,10 @@ const WorkCard = ({ title, desc, skills, imgURL, titlelink }) => {
           </p>
         </div>
       </div>
-      <ul className="flex gap-2 border-b-2 border-[#57534e] p-2 font-poppins ">
+      <ul className=" mt-1 flex gap-2 border-b-2 border-stone-700  p-2 pb-8 font-poppins">
         {skills.map((skill) => (
           <li
-            className="rounded-full bg-lightBg px-2 py-1  text-xs text-white hover:scale-105 dark:bg-mainBg md:px-2"
+            className="rounded-full bg-stone-100 px-2 py-1 text-xs font-bold text-stone-900  hover:scale-105 dark:bg-mainBg dark:font-normal dark:text-white md:px-2 md:text-sm"
             key={skill.skillName}
           >
             <a href={skill.skillURL} target="_">
