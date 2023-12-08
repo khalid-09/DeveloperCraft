@@ -7,7 +7,7 @@ import { memo } from 'react';
 
 const SocialLinks = memo(function SocialLinks() {
   return (
-    <div className="w-full rounded-2xl bg-mainBg p-4  transition duration-300 ease-in dark:bg-lightBg md:w-2/6">
+    <div className="w-full rounded-2xl border border-neutral-700  bg-mainBg p-4 transition duration-300 ease-in dark:bg-lightBg md:w-2/6">
       <div className="ml-2 flex items-center justify-start gap-2">
         <img src={link} alt="links-icon" width={25} height={25} />
         <p className="text-sm  font-semibold uppercase tracking-wide text-[#57534e]">Links</p>

@@ -15,12 +15,12 @@ const PageNav = () => {
   }
 
   return (
-    <header className="fixed top-1">
-      <div className="bg-bgMain/0 fixed -inset-2  z-10 mx-auto h-9 w-[390px] backdrop-blur-sm sm:w-[550px] md:w-[650px]"></div>
-      <nav className=" z-10 mx-auto mt-6 flex  w-[390px] items-center justify-between rounded-full border-b-2  border-neutral-700 bg-mainBg px-1 py-1 font-libre text-sm transition duration-300 ease-in dark:bg-lightBg sm:w-[550px] md:w-[650px] ">
-        <ul className="hidden gap-3 rounded-full  text-[#d6d3d1] md:flex">
+    <header className="fixed top-1 ">
+      <div className="bg-bgMain/0 fixed -inset-2  z-10 mx-auto h-9 w-[380px] backdrop-blur-sm sm:w-[550px] md:w-[680px]"></div>
+      <nav className=" z-10 mx-auto mt-6 flex  w-[380px] items-center justify-between rounded-full border  border-neutral-700 bg-mainBg px-1 py-1 font-libre text-sm transition duration-300 ease-in dark:bg-lightBg sm:w-[550px] md:w-[680px] ">
+        <ul className="hidden rounded-full  text-[#d6d3d1] md:flex">
           <li className="nav-list">
-            <NavLink to="/homepage">Home</NavLink>
+            <NavLink to="/home">Home</NavLink>
           </li>
           <li className="nav-list">
             <NavLink to="/about">About</NavLink>

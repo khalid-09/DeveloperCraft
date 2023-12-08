@@ -4,7 +4,7 @@ import webLink from '../assets/icons/website-link.svg';
 const WorkCard = ({ title, desc, skills, imgURL, titlelink }) => {
   return (
     <div>
-      <div className="mt-4 flex  gap-2 p-2 sm:gap-4 md:gap-6">
+      <div className="mt-4 flex  gap-4 p-2 md:gap-6">
         <div className="h-20 w-24 rounded-3xl border">
           <img src={imgURL} alt="project-link" />
         </div>

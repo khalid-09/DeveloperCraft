@@ -31,8 +31,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppLayout />}>
-          <Route index element={<Navigate to="/homepage" replace />} />
-          <Route path="/homepage" element={<Homepage />} />
+          <Route index element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Homepage />} />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
           <Route path="/blog" element={<Blog />} />

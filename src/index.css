@@ -33,9 +33,9 @@ li {
 }
 
 nav a.active {
-  color: #fff);
-  font-weight: bold;
+  color: #fff;
   font-style: italic;
+  font-weight: bold;
 }
 
 @layer components {

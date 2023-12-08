@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 const AppLayout = () => {
   return (
-    <div className="mx-auto w-[390px] text-white sm:w-[550px] md:w-[650px]">
+    <div className="mx-auto w-[380px] text-white sm:w-[550px] md:w-[680px]">
       <PageNav />
       <main>
         <Outlet />

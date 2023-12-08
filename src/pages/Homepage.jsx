@@ -9,7 +9,7 @@ const Homepage = () => {
           <HomeAbout />
         </section>
         <section>
-          <HomeWork />
+          <HomeWork homeWork={true} />
         </section>
       </div>
     </>
