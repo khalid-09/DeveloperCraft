@@ -1,7 +1,7 @@
 const projectData = [
   {
-    title: 'WorldWise',
-    desc: 'Track your global travels at a glance with our app, counting countries visited in a single tap.',
+    title: 'The Wild Oasis',
+    desc: 'Curate your escape with our cabin booking app, where nature meets comfort in a seamless online getaway experience.',
     imgURL: '/',
     titleLink: '/',
     skills: [
@@ -10,7 +10,7 @@ const projectData = [
         skillURL: 'https://react.dev/',
       },
       {
-        skillName: 'Tailwind',
+        skillName: 'React Query',
         skillURL: 'https://tailwindcss.com/',
       },
       {
@@ -18,14 +18,14 @@ const projectData = [
         skillURL: 'https://reactrouter.com/en/main',
       },
       {
-        skillName: 'Redux',
+        skillName: 'React Form Hook',
         skillURL: 'https://redux.js.org/',
       },
     ],
   },
   {
-    title: 'usePopcorn',
-    desc: 'Discover, track all-in-one app for accessing movie details and keeping tabs on your watched list.',
+    title: 'WorldWise',
+    desc: 'Track your global travels at a glance with our app, counting countries visited in a single tap.',
     imgURL: '/',
     titleLink: '/',
     skills: [
