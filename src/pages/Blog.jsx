@@ -1,13 +1,9 @@
-import HomeWork from "../components/HomeWork";
+import NotFound from '../components/NotFound';
 
 const Blog = () => {
   return (
     <>
-      <div className="mt-36 md:mt-44">
-        <section>
-          <HomeWork />
-        </section>
-      </div>
+      <NotFound />
     </>
   );
 };
