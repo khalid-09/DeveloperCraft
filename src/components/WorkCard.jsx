@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import webLink from '../assets/icons/website-link.svg';
 
-const WorkCard = ({ title, desc, skills, imgURL, titlelink }) => {
+const WorkCard = ({ work = false, title, desc, skills, imgURL, titleLink, learnMore }) => {
   return (
     <div>
       <div className="mt-4 flex  gap-4 p-2 md:gap-6">
@@ -9,15 +9,15 @@ const WorkCard = ({ title, desc, skills, imgURL, titlelink }) => {
           <img src={imgURL} alt="project-link" />
         </div>
         <div className="flex w-full flex-col gap-2">
-          <h4 className="font-poppins text-xl transition hover:underline ">
-            <a href={titlelink} className="flex gap-1">
+          <h4 className="flex gap-1 font-poppins text-xl  transition hover:underline">
+            <a target="_blank" rel="noopener noreferrer" href={titleLink}>
               {title}
-              <img src={webLink} height={15} width={15} alt="web-link-icon" />
             </a>
+            <img src={webLink} height={15} width={15} alt="web-link-icon" />
           </h4>
           <p className="font-poppins text-sm text-stone-400 md:text-base">
             {desc}{' '}
-            <Link to="/work" className="font-poppins italic text-white opacity-50 hover:underline">
+            <Link to={work ? learnMore : '/work'} className="font-poppins italic text-white opacity-50 hover:underline">
               Learn More &rarr;
             </Link>
           </p>

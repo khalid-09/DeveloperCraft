@@ -11,7 +11,7 @@ export default {
       },
       colors: {
         mainBg: '#0c0a09',
-        lightBg: '#292524',
+        lightBg: '#1c1917',
       },
     },
   },

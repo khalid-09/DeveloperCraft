@@ -1,11 +1,11 @@
-import HomeWork from "../components/HomeWork";
+import SocialLinks from '../components/SocialLinks';
 
 const Contact = () => {
   return (
     <>
       <div className="mt-36 md:mt-44">
         <section>
-          <HomeWork />
+          <SocialLinks isContact={true} />
         </section>
       </div>
     </>

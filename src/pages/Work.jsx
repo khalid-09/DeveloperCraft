@@ -1,11 +1,11 @@
-import HomeWork from "../components/HomeWork";
+import HomeWork from '../components/HomeWork';
 
 const Work = () => {
   return (
     <>
       <div className="mt-36 md:mt-44">
         <section>
-          <HomeWork />
+          <HomeWork work={true} />
         </section>
       </div>
     </>

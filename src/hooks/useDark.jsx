@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function useDark() {
   const [isDark, setIsDark] = useState(function () {
-    const storedValue = localStorage.getItem("isDark");
+    const storedValue = localStorage.getItem('isDark');
     if (storedValue) return JSON.parse(storedValue);
     return true;
   });
@@ -13,17 +13,16 @@ export function useDark() {
 
   useEffect(
     function () {
-      localStorage.setItem("isDark", JSON.stringify(isDark));
+      localStorage.setItem('isDark', JSON.stringify(isDark));
     },
-    [isDark],
+    [isDark]
   );
 
   useEffect(() => {
-    const body = document.documentElement;
     if (isDark) {
-      body.classList.add("dark");
+      document.documentElement.classList.add('dark');
     } else {
-      body.classList.remove("dark");
+      document.documentElement.classList.remove('dark');
     }
   }, [isDark]);
 
