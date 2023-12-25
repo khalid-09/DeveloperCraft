@@ -17,7 +17,7 @@ const PageNav = () => {
   return (
     <header className="fixed top-1 ">
       <div className="bg-bgMain/0 fixed -inset-2  z-10 mx-auto h-9 w-[380px] backdrop-blur-sm sm:w-[550px] md:w-[680px]"></div>
-      <nav className=" z-10 mx-auto mt-6 flex  w-[380px] items-center justify-between rounded-full  bg-mainBg px-1 py-1 font-libre text-sm transition duration-300 ease-in dark:bg-lightBg sm:w-[550px] md:w-[680px] ">
+      <nav className=" z-10 mx-auto mt-6 flex  w-[380px] items-center justify-between rounded-full  border border-stone-700 border-opacity-30 bg-mainBg px-1 py-1 font-libre text-sm transition duration-300 ease-in dark:bg-lightBg sm:w-[550px] md:w-[680px] ">
         <ul className="hidden rounded-full  text-[#d6d3d1] md:flex">
           <li className="nav-list">
             <NavLink to="/home">Home</NavLink>

@@ -7,7 +7,7 @@ import linkdein from '../assets/icons/logo-linkdein.svg';
 const SocialLinks = ({ isContact = false }) => {
   return (
     <div
-      className={`w-full rounded-2xl  bg-mainBg p-4 transition duration-300 ease-in dark:bg-lightBg  ${
+      className={`w-full rounded-2xl  border border-stone-700 border-opacity-30 bg-mainBg p-4 transition  duration-300 ease-in dark:bg-lightBg ${
         isContact ? 'md:w-full' : 'md:w-2/6'
       }`}
     >

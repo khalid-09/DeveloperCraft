@@ -1,9 +1,13 @@
+import ContactForm from '../components/ContactForm';
 import SocialLinks from '../components/SocialLinks';
 
 const Contact = () => {
   return (
     <>
-      <div className="mt-36 md:mt-44">
+      <div className="mt-28 flex flex-col gap-4 md:mt-32">
+        <section>
+          <ContactForm />
+        </section>
         <section>
           <SocialLinks isContact={true} />
         </section>
