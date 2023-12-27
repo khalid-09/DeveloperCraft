@@ -17,7 +17,7 @@ const HomeWork = ({ homeWork = false, work }) => {
         </p>
       )}
       <div
-        className={`mb-4 mt-2 w-full rounded-2xl border border-stone-700 border-opacity-30 bg-mainBg px-4 py-4 dark:bg-lightBg ${
+        className={`mb-4 mt-2 w-full rounded-2xl border border-stone-700 border-opacity-30 bg-mainBg p-4 dark:bg-lightBg ${
           work ? 'pb-10' : ''
         }`}
       >

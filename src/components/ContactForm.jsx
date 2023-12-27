@@ -24,7 +24,7 @@ const ContactForm = () => {
         </div>
         <h3 className="mb-6 ml-1 mt-8 font-poppins text-sm tracking-wide text-stone-300">
           Contact me by filling out the form below, or by sending to{' '}
-          <span className="font-semibold">
+          <span className="font-semibold italic text-stone-50">
             <a href="mailto:khaliljpc@gmail.com">khaliljpc@gmail.com</a>
           </span>
         </h3>
