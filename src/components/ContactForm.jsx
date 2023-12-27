@@ -1,18 +1,29 @@
 import { useState } from 'react';
 import mailIcon from '../assets/icons/mail.svg';
 import sendIcon from '../assets/icons/send.svg';
+import { useForm } from 'react-hook-form';
+import Error from './Error';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(name, email, message);
-    setEmail('');
-    setMessage('');
-    setName('');
+  const {
+    register,
+    handleSubmit,
+    reset,
+    getValues,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    // e.preventDefault();
+    // console.log(name, email, message);
+    // setEmail('');
+    // setMessage('');
+    // setName('');
+    console.log(data);
   };
 
   return (
@@ -28,34 +39,51 @@ const ContactForm = () => {
             <a href="mailto:khaliljpc@gmail.com">khaliljpc@gmail.com</a>
           </span>
         </h3>
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            id="name"
-            type="text"
-            className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4 py-3 font-poppins text-stone-500 outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
-            placeholder="Enter your name"
-          />
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            id="email"
-            type="email"
-            className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4  py-3 font-poppins text-stone-500 outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
-            placeholder="Enter your email address"
-          />
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            minLength={20}
-            maxLength={10000}
-            rows={3}
-            className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4 py-3 pb-8 font-poppins outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
-            placeholder="Enter your message here..."
-          />
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+          <div className="">
+            <input
+              // value={name}
+              // onChange={(e) => setName(e.target.value)}
+              {...register('name', {
+                required: 'This field is required',
+              })}
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+              className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4 py-3 font-poppins text-stone-500 outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
+            />
+            {errors?.name?.message && <Error>{errors.name.message}</Error>}
+          </div>
+          <div className="">
+            <input
+              // value={email}
+              // onChange={(e) => setEmail(e.target.value)}
+              {...register('email', {
+                required: 'This field is required',
+              })}
+              id="email"
+              type="email"
+              className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4  py-3 font-poppins text-stone-500 outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
+              placeholder="Enter your email address"
+            />
+            {errors?.email?.message && <Error>{errors.email.message}</Error>}
+          </div>
+          <div className="">
+            <textarea
+              // value={message}
+              // onChange={(e) => setMessage(e.target.value)}
+              id="message"
+              minLength={5}
+              maxLength={10000}
+              {...register('message', {
+                required: 'This field is required',
+              })}
+              rows={3}
+              className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4 py-3 pb-8 font-poppins outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
+              placeholder="Enter your message here..."
+            />
+            {errors?.message?.message && <Error>{errors.message.message}</Error>}
+          </div>
           <div className="flex justify-end">
             <button className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white ">
               Submit
