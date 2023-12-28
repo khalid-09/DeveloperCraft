@@ -31,7 +31,7 @@ const WorkCard = ({ work = false, title, desc, skills, imgURL, titleLink, learnM
             className="rounded-full bg-stone-100 px-2 py-1 text-xs font-bold text-stone-900  hover:scale-105 dark:bg-mainBg dark:font-normal dark:text-white md:px-2 md:text-sm"
             key={skill.skillName}
           >
-            <a href={skill.skillURL} target="_">
+            <a href={skill.skillURL} target="_blank" rel="noreferrer noopener">
               {skill.skillName}
             </a>
           </li>

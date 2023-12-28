@@ -1,19 +1,18 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import mailIcon from '../assets/icons/mail.svg';
 import sendIcon from '../assets/icons/send.svg';
 import { useForm } from 'react-hook-form';
 import Error from './Error';
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
 
   const {
     register,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = useForm();
 
@@ -24,6 +23,7 @@ const ContactForm = () => {
     // setMessage('');
     // setName('');
     console.log(data);
+    reset();
   };
 
   return (

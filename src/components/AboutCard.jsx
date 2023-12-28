@@ -15,8 +15,8 @@ const AboutCard = () => {
         <p className="text-center font-poppins text-xl text-stone-400 ">
           a <span className="font-semibold text-stone-200">software engineer</span> based in India.
         </p>
-        <p className="text-center font-poppins text-sm tracking-wide opacity-70">
-          Dedicated about crafting innovative solutions through software development that effectively solve problems.
+        <p className="text-center font-poppins text-sm tracking-wide text-stone-400">
+          Dedicated to crafting innovative solutions through software development that effectively solve problems.
         </p>
       </div>
     </>

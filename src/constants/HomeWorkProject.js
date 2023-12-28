@@ -8,7 +8,7 @@ const projectData = [
     title: 'The Wild Oasis',
     desc: 'Curate your escape with our cabin booking app, in a seamless online getaway experience.',
     imgURL: wildIcon,
-    titleLink: 'https://the-wild-oasis.vercel.app/login',
+    titleLink: 'https://the-wild-oasis-ten-eta.vercel.app/',
     learnMore: 'https://github.com/khalid-09/The-Wild-Oasis',
     skills: [
       {
@@ -37,7 +37,7 @@ const projectData = [
     title: 'PizzaCo.',
     desc: 'Track your global travels at a glance with our app, counting countries visited in a single tap.',
     imgURL: pizzaIcon,
-    titleLink: '/',
+    titleLink: 'https://github.com/khalid-09/Fast-React-Pizza-Co.',
     learnMore: 'https://github.com/khalid-09/Fast-React-Pizza-Co.',
     skills: [
       {
@@ -87,7 +87,7 @@ const projectData = [
     title: 'usePopcorn',
     desc: 'Discover, track all-in-one app for accessing movie details and keeping tabs on your watched list.',
     imgURL: movieIcon,
-    titleLink: '/',
+    titleLink: 'https://github.com/khalid-09/usePopcorn',
     learnMore: 'https://github.com/khalid-09/usePopcorn',
     skills: [
       {

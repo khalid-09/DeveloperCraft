@@ -23,13 +23,13 @@ const SocialLinks = ({ isContact = false }) => {
             </a>
           </div>
           <div className="">
-            <a href="" target="_blank" rel="noreferrer noopener">
+            <a href="https://www.linkedin.com/in/khalid-ansari-917357230/" target="_blank" rel="noreferrer noopener">
               <img src={linkdein} alt="linkdein-icon" height={70} width={70} />
             </a>
           </div>
         </div>
         <div className={`mt-2 flex gap-2  ${isContact ? 'md:gap-4' : 'md:justify-evenly md:gap-0'}`}>
-          <div className="">
+          <div>
             <a href="" target="_blank" rel="noreferrer noopener">
               <img src={instagram} alt="instagram-icon" height={70} width={70} />
             </a>
