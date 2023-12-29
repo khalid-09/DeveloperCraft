@@ -91,7 +91,10 @@ const ContactForm = () => {
             {errors?.message?.message && <Error>{errors.message.message}</Error>}
           </div>
           <div className="flex justify-end">
-            <button className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white ">
+            <button
+              disabled
+              className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white "
+            >
               Submit
               <img src={sendIcon} alt="mail-icon" width={18} height={18} className="fill-black dark:fill-white" />
             </button>
