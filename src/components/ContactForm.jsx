@@ -42,6 +42,7 @@ const ContactForm = () => {
         <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
           <div className="">
             <input
+              disabled
               // value={name}
               // onChange={(e) => setName(e.target.value)}
               {...register('name', {
@@ -57,6 +58,7 @@ const ContactForm = () => {
           </div>
           <div className="">
             <input
+              disabled
               // value={email}
               // onChange={(e) => setEmail(e.target.value)}
               {...register('email', {
@@ -72,6 +74,7 @@ const ContactForm = () => {
           </div>
           <div className="">
             <textarea
+              disabled
               // value={message}
               // onChange={(e) => setMessage(e.target.value)}
               name="usersMessage"
