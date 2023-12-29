@@ -13,9 +13,7 @@ const ExperienceCard = () => {
           {experience.map((skill) => (
             <li
               className={`rounded-full border border-stone-700 border-opacity-60 bg-stone-100 px-2 py-[1px]  text-xs font-semibold text-stone-900  dark:bg-stone-700 dark:font-normal dark:text-stone-200 md:px-2 md:text-sm ${
-                !skill.light
-                  ? '  hover:scale-105 dark:bg-stone-200 dark:font-semibold dark:text-stone-900'
-                  : ' bg-stone-600 text-stone-500 '
+                !skill.light ? ' hover:scale-105 dark:bg-stone-700' : ' bg-stone-600 text-stone-500 hover:scale-100'
               }`}
               key={skill.skillName}
             >
