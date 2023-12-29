@@ -1,6 +1,7 @@
 import wildIcon from '../assets/icons/wildOasis.svg';
 import pizzaIcon from '../assets/icons/pizza.svg';
 import worldIcon from '../assets/icons/worldwise.svg';
+import portIcon from '../assets/icons/port.svg';
 import movieIcon from '../assets/icons/movie.svg';
 
 const projectData = [
@@ -17,7 +18,7 @@ const projectData = [
       },
       {
         skillName: 'React Query',
-        skillURL: 'https://tailwindcss.com/',
+        skillURL: 'https://tanstack.com/query/v3/',
       },
       {
         skillName: 'React Router',
@@ -25,11 +26,11 @@ const projectData = [
       },
       {
         skillName: 'Form Hook',
-        skillURL: 'https://redux.js.org/',
+        skillURL: 'https://www.react-hook-form.com/',
       },
       {
         skillName: 'Styled Components',
-        skillURL: 'https://redux.js.org/',
+        skillURL: 'https://styled-components.com/',
       },
     ],
   },
@@ -80,6 +81,31 @@ const projectData = [
       {
         skillName: 'Redux',
         skillURL: 'https://redux.js.org/',
+      },
+    ],
+  },
+  {
+    title: 'Developercraft',
+    desc: 'Personal portfolio website to showcase my work and skills.',
+    imgURL: portIcon,
+    titleLink: '/',
+    learnMore: 'https://github.com/khalid-09/DeveloperCraft',
+    skills: [
+      {
+        skillName: 'React',
+        skillURL: 'https://react.dev/',
+      },
+      {
+        skillName: 'Tailwind',
+        skillURL: 'https://tailwindcss.com/',
+      },
+      {
+        skillName: 'React Router',
+        skillURL: 'https://reactrouter.com/en/main',
+      },
+      {
+        skillName: 'Hook Form',
+        skillURL: 'https://www.react-hook-form.com/',
       },
     ],
   },
