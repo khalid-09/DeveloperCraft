@@ -6,8 +6,8 @@ const experience = [
   { skillName: 'Tailwind', skillLink: 'https://tailwindcss.com/' },
   { skillName: 'Redux/ Redux RTK', skillLink: 'https://redux-toolkit.js.org/' },
   { skillName: 'React Router', skillLink: 'https://reactrouter.com/en/main' },
-  { skillName: 'React Query', skillLink: 'https://tanstack.com/query/v3/' },
   { skillName: 'Supabase', skillLink: 'https://supabase.com/' },
+  { skillName: 'React Query', skillLink: 'https://tanstack.com/query/v3/' },
   { skillName: 'Styled Components', skillLink: 'https://styled-components.com/' },
   { skillName: 'Form Hook', skillLink: 'https://www.react-hook-form.com/' },
 ];
