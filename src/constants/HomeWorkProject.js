@@ -36,7 +36,7 @@ const projectData = [
   },
   {
     title: 'PizzaCo.',
-    desc: 'Track your global travels at a glance with our app, counting countries visited in a single tap.',
+    desc: 'A webapp where you can order pizza build using Redux Toolkit.',
     imgURL: pizzaIcon,
     titleLink: 'https://github.com/khalid-09/Fast-React-Pizza-Co.',
     learnMore: 'https://github.com/khalid-09/Fast-React-Pizza-Co.',

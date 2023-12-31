@@ -39,12 +39,20 @@ const ContactForm = () => {
             <a href="mailto:khaliljpc@gmail.com">khaliljpc@gmail.com</a>
           </span>
         </h3>
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-          <div className="">
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          className="flex flex-col gap-4"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
+          <div>
             <input
-              disabled
-              // value={name}
-              // onChange={(e) => setName(e.target.value)}
               {...register('name', {
                 required: 'This field is required',
               })}
@@ -56,11 +64,8 @@ const ContactForm = () => {
             />
             {errors?.name?.message && <Error>{errors.name.message}</Error>}
           </div>
-          <div className="">
+          <div>
             <input
-              disabled
-              // value={email}
-              // onChange={(e) => setEmail(e.target.value)}
               {...register('email', {
                 required: 'This field is required',
               })}
@@ -72,11 +77,8 @@ const ContactForm = () => {
             />
             {errors?.email?.message && <Error>{errors.email.message}</Error>}
           </div>
-          <div className="">
+          <div>
             <textarea
-              disabled
-              // value={message}
-              // onChange={(e) => setMessage(e.target.value)}
               name="usersMessage"
               id="message"
               minLength={5}
@@ -91,10 +93,7 @@ const ContactForm = () => {
             {errors?.message?.message && <Error>{errors.message.message}</Error>}
           </div>
           <div className="flex justify-end">
-            <button
-              disabled
-              className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white "
-            >
+            <button className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white ">
               Submit
               <img src={sendIcon} alt="mail-icon" width={18} height={18} className="fill-black dark:fill-white" />
             </button>
