@@ -26,7 +26,7 @@ const ContactForm = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...data }),
+      body: encode({ ...data }),
     })
       .then(() => alert('Success!'))
       .catch((error) => alert(error));
@@ -52,11 +52,18 @@ const ContactForm = () => {
           <input type="email" name="email" />
           <textarea name="message"></textarea>
         </form> */}
-        <form name="contact" className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-          {/* <input type="hidden" name="contact-form" value="contact" />
+        <form
+          data-netlify="true"
+          method="post"
+          name="contact"
+          data-netlify-honeypot="bot-field"
+          className="flex flex-col gap-4"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <input type="hidden" name="contact-form" value="contact" />
           <div hidden>
             <input name="bot-field" />
-          </div> */}
+          </div>
           <div>
             <input
               {...register('name', {
