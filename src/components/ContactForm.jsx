@@ -39,15 +39,13 @@ const ContactForm = () => {
             <a href="mailto:khaliljpc@gmail.com">khaliljpc@gmail.com</a>
           </span>
         </h3>
-        <form
-          name="contact"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          className="flex flex-col gap-4"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <input type="hidden" name="form-name" value="contact" />
+        <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
+        <form name="contact" method="post" className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+          <input type="hidden" name="contact-form" value="contact" />
           <div hidden>
             <input name="bot-field" />
           </div>
@@ -56,6 +54,7 @@ const ContactForm = () => {
               {...register('name', {
                 required: 'This field is required',
               })}
+              name="name"
               id="name"
               type="text"
               placeholder="Enter your name"
@@ -68,6 +67,7 @@ const ContactForm = () => {
               {...register('email', {
                 required: 'This field is required',
               })}
+              name="email"
               id="email"
               type="email"
               className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4  py-3 font-poppins text-stone-500 outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
@@ -77,6 +77,7 @@ const ContactForm = () => {
           </div>
           <div>
             <textarea
+              name="message"
               id="message"
               minLength={5}
               maxLength={10000}
@@ -90,7 +91,10 @@ const ContactForm = () => {
             {errors?.message?.message && <Error>{errors.message.message}</Error>}
           </div>
           <div className="flex justify-end">
-            <button className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white ">
+            <button
+              type="submit"
+              className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white "
+            >
               Submit
               <img src={sendIcon} alt="mail-icon" width={18} height={18} className="fill-black dark:fill-white" />
             </button>
