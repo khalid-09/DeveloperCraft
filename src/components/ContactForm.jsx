@@ -4,6 +4,12 @@ import sendIcon from '../assets/icons/send.svg';
 import { useForm } from 'react-hook-form';
 import Error from './Error';
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 const ContactForm = () => {
   // const [name, setName] = useState('');
   // const [email, setEmail] = useState('');
@@ -17,11 +23,13 @@ const ContactForm = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    // e.preventDefault();
-    // console.log(name, email, message);
-    // setEmail('');
-    // setMessage('');
-    // setName('');
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...data }),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error));
     console.log(data);
     reset();
   };
@@ -39,16 +47,16 @@ const ContactForm = () => {
             <a href="mailto:khaliljpc@gmail.com">khaliljpc@gmail.com</a>
           </span>
         </h3>
-        <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        {/* <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
           <input type="email" name="email" />
           <textarea name="message"></textarea>
-        </form>
-        <form name="contact" method="post" className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-          <input type="hidden" name="contact-form" value="contact" />
+        </form> */}
+        <form name="contact" className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+          {/* <input type="hidden" name="contact-form" value="contact" />
           <div hidden>
             <input name="bot-field" />
-          </div>
+          </div> */}
           <div>
             <input
               {...register('name', {
