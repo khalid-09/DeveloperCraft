@@ -57,7 +57,6 @@ const ContactForm = () => {
                 required: 'This field is required',
               })}
               id="name"
-              name="fullName"
               type="text"
               placeholder="Enter your name"
               className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4 py-3 font-poppins text-stone-500 outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
@@ -70,7 +69,6 @@ const ContactForm = () => {
                 required: 'This field is required',
               })}
               id="email"
-              name="emailAddress"
               type="email"
               className="w-full rounded-xl border border-stone-100 border-opacity-10 bg-mainBg px-4  py-3 font-poppins text-stone-500 outline-none focus:border-stone-600 focus:border-opacity-90 dark:bg-lightBg"
               placeholder="Enter your email address"
@@ -79,7 +77,6 @@ const ContactForm = () => {
           </div>
           <div>
             <textarea
-              name="usersMessage"
               id="message"
               minLength={5}
               maxLength={10000}
