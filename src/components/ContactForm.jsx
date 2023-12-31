@@ -1,20 +1,9 @@
-// import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import mailIcon from '../assets/icons/mail.svg';
 import sendIcon from '../assets/icons/send.svg';
-import { useForm } from 'react-hook-form';
 import Error from './Error';
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
-
 const ContactForm = () => {
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [message, setMessage] = useState('');
-
   const {
     register,
     handleSubmit,
@@ -23,14 +12,6 @@ const ContactForm = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...data }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error));
-    console.log(data);
     reset();
   };
 
@@ -47,25 +28,10 @@ const ContactForm = () => {
             <a href="mailto:khaliljpc@gmail.com">khaliljpc@gmail.com</a>
           </span>
         </h3>
-        {/* <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form> */}
-        <form
-          data-netlify="true"
-          method="post"
-          // name="contact"
-          // data-netlify-honeypot="bot-field"
-          className="flex flex-col gap-4"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          {/* <input type="hidden" name="contact-form" value="contact" /> */}
-          {/* <div hidden>
-            <input name="bot-field" />
-          </div> */}
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <input
+              disabled
               {...register('name', {
                 required: 'This field is required',
               })}
@@ -79,6 +45,7 @@ const ContactForm = () => {
           </div>
           <div>
             <input
+              disabled
               {...register('email', {
                 required: 'This field is required',
               })}
@@ -92,6 +59,7 @@ const ContactForm = () => {
           </div>
           <div>
             <textarea
+              disabled
               name="message"
               id="message"
               minLength={5}
@@ -107,6 +75,7 @@ const ContactForm = () => {
           </div>
           <div className="flex justify-end">
             <button
+              disabled
               type="submit"
               className=" flex items-center gap-1 rounded-2xl border border-stone-200 border-opacity-30 bg-white px-6 py-2 font-poppins  font-semibold tracking-wide text-mainBg dark:bg-white "
             >
