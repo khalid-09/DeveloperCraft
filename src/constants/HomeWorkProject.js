@@ -3,8 +3,46 @@ import pizzaIcon from '../assets/icons/pizza.svg';
 import worldIcon from '../assets/icons/worldwise.svg';
 import portIcon from '../assets/icons/port.svg';
 import movieIcon from '../assets/icons/movie.svg';
+import radarIcon from '../assets/icons/radar.svg';
 
 const projectData = [
+  {
+    title: 'Pocket Flow',
+    desc: 'Effortlessly manage your finances in our web app.',
+    imgURL: radarIcon,
+    titleLink: 'https://pocket-flow-roan.vercel.app/',
+    learnMore: 'https://github.com/khalid-09/PocketFlow',
+    skills: [
+      {
+        skillName: 'React',
+        skillURL: 'https://react.dev/',
+      },
+      {
+        skillName: 'Tanstak Query',
+        skillURL: 'https://tanstack.com/query/v3/',
+      },
+      {
+        skillName: 'React Router',
+        skillURL: 'https://reactrouter.com/en/main',
+      },
+      {
+        skillName: 'Form Hook',
+        skillURL: 'https://www.react-hook-form.com/',
+      },
+      {
+        skillName: 'Shadcn',
+        skillURL: 'https://ui.shadcn.com/',
+      },
+      {
+        skillName: 'Zod',
+        skillURL: 'https://zod.dev/',
+      },
+      {
+        skillName: 'Framer Motion',
+        skillURL: 'https://www.framer.com/motion/',
+      },
+    ],
+  },
   {
     title: 'The Wild Oasis',
     desc: 'Curate your escape with our cabin booking app, in a seamless online getaway experience.',
