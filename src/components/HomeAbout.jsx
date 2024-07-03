@@ -15,7 +15,7 @@ const HomeAbout = memo(function HomeAbout() {
           </p>
           <h3 className="font-poppins text-xl text-stone-200">Hi, I&apos;m Khalid👋</h3>
           <p className="font-poppins text-[#a8a29e]">
-            An Indian software engineer passionate about crafting app-based solutions.
+            A software engineer passionate about crafting app-based solutions.
           </p>
           <Button text="learn more" linkTo="/about" />
         </div>

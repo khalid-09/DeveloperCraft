@@ -1,5 +1,6 @@
 const experience = [
   { skillName: 'React', skillLink: 'https://react.dev/' },
+  { skillName: 'Next.js', skillLink: 'https://nextjs.org/' },
   { skillName: 'JavaScript', skillLink: 'https://javascript.info/' },
   { skillName: 'TypeScript', skillLink: 'https://www.typescriptlang.org/' },
   { skillName: 'HTML', skillLink: '/', light: true },
@@ -12,6 +13,10 @@ const experience = [
   { skillName: 'Styled Components', skillLink: 'https://styled-components.com/' },
   { skillName: 'Form Hook', skillLink: 'https://www.react-hook-form.com/' },
   { skillName: 'Zod', skillLink: 'https://zod.dev/' },
+  { skillName: 'Prisma', skillLink: 'https://www.prisma.io/' },
+  { skillName: 'Node.js', skillLink: 'https://nodejs.org/en/' },
+  { skillName: 'Express.js', skillLink: 'https://expressjs.com/' },
+  { skillName: 'NextAuth.js', skillLink: 'https://authjs.dev' },
 ];
 
 export default experience;

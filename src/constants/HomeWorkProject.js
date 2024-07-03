@@ -4,8 +4,46 @@ import worldIcon from '../assets/icons/worldwise.svg';
 import portIcon from '../assets/icons/port.svg';
 import movieIcon from '../assets/icons/movie.svg';
 import radarIcon from '../assets/icons/radar.svg';
+import hopIcon from '../assets/icons/hop.svg';
 
 const projectData = [
+  {
+    title: 'Ink-Spire',
+    desc: 'Blogging platform for writers to share their stories and connect with readers.',
+    imgURL: hopIcon,
+    titleLink: 'https://ink-spire-sage.vercel.app/',
+    learnMore: 'https://github.com/khalid-09/InkSpire',
+    skills: [
+      {
+        skillName: 'Next.js',
+        skillURL: 'https://nextjs.org/',
+      },
+      {
+        skillName: 'Prisma',
+        skillURL: 'https://www.prisma.io/',
+      },
+      {
+        skillName: 'Next Auth',
+        skillURL: 'https://authjs.dev/',
+      },
+      {
+        skillName: 'Form Hook',
+        skillURL: 'https://www.react-hook-form.com/',
+      },
+      {
+        skillName: 'Shadcn',
+        skillURL: 'https://ui.shadcn.com/',
+      },
+      {
+        skillName: 'Zod',
+        skillURL: 'https://zod.dev/',
+      },
+      {
+        skillName: 'Editor.js',
+        skillURL: 'https://editorjs.io/',
+      },
+    ],
+  },
   {
     title: 'Pocket Flow',
     desc: 'Effortlessly manage your finances in our web app.',
