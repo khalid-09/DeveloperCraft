@@ -17,6 +17,10 @@ const experience = [
   { skillName: 'Node.js', skillLink: 'https://nodejs.org/en/' },
   { skillName: 'Express.js', skillLink: 'https://expressjs.com/' },
   { skillName: 'NextAuth.js', skillLink: 'https://authjs.dev' },
+  { skillName: 'MongoDB', skillLink: 'https://www.mongodb.com/' },
+  { skillName: 'PostgreSQL', skillLink: 'https://www.postgresql.org/' },
+  { skillName: 'GraphQL', skillLink: 'https://graphql.org/' },
+  { skillName: 'MySQL', skillLink: 'https://www.mysql.com/' },
 ];
 
 export default experience;

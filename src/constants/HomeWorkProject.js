@@ -27,6 +27,10 @@ const projectData = [
         skillURL: 'https://authjs.dev/',
       },
       {
+        skillName: 'MongoDB Atlas',
+        skillURL: 'https://www.mongodb.com/cloud/atlas',
+      },
+      {
         skillName: 'Form Hook',
         skillURL: 'https://www.react-hook-form.com/',
       },
